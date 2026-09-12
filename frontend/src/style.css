@@ -1,0 +1,257 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  /* 品牌色：深蓝 + 科技蓝 + 白 */
+  --navy: #0a1f3d;
+  --navy-2: #0b2545;
+  --navy-3: #12325f;
+  --blue: #1e90ff;
+  --blue-light: #4da3ff;
+  --blue-soft: rgba(30, 144, 255, 0.12);
+  --cyan: #2fd6d6;
+
+  /* 深色科技主题 */
+  --bg: #0a0e16;
+  --bg-glow-1: rgba(30, 144, 255, 0.14);
+  --bg-glow-2: rgba(124, 127, 220, 0.1);
+  --bg-glow-3: rgba(47, 214, 214, 0.06);
+  --surface: rgba(255, 255, 255, 0.055);
+  --surface-2: rgba(255, 255, 255, 0.035);
+  --surface-3: rgba(255, 255, 255, 0.02);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text: #ffffff;
+  --text-2: #f0f4fa;
+  --text-3: #d9e2ee;
+
+  --success: #3ddc84;
+  --warning: #f5b04d;
+  --danger: #f0574a;
+
+  --radius: 12px;
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 18px 44px rgba(0, 0, 0, 0.5);
+  --mono: ui-monospace, SFMono-Regular, 'JetBrains Mono', Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  /* 背景长图 hero-bg.jpg 覆盖整页，随滚轮滑动滚动 */
+  background-color: #0a0e16;
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--blue-light);
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(30, 144, 255, 0.35);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3648;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4a61;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---- Element Plus 主题（深色） ---- */
+:root {
+  --el-color-primary: var(--blue);
+  --el-color-primary-light-3: #66b3ff;
+  --el-color-primary-light-5: #99ccff;
+  --el-color-primary-light-7: #cce5ff;
+  --el-color-primary-light-8: #1a3f66;
+  --el-color-primary-light-9: #10233d;
+  --el-color-primary-dark-2: #1573cc;
+  --el-bg-color: #141b29;
+  --el-bg-color-overlay: #1a2233;
+  --el-fill-color: rgba(255, 255, 255, 0.07);
+  --el-fill-color-light: rgba(255, 255, 255, 0.05);
+  --el-fill-color-lighter: rgba(255, 255, 255, 0.035);
+  --el-fill-color-blank: transparent;
+  --el-border-color: rgba(255, 255, 255, 0.16);
+  --el-border-color-light: rgba(255, 255, 255, 0.11);
+  --el-border-color-lighter: rgba(255, 255, 255, 0.08);
+  --el-text-color-primary: var(--text);
+  --el-text-color-regular: var(--text-2);
+  --el-text-color-secondary: var(--text-3);
+  --el-text-color-placeholder: #5b6b83;
+  --el-font-family: var(--sans);
+  --el-border-radius-base: 8px;
+  --el-mask-color: rgba(8, 12, 20, 0.7);
+}
+
+.el-table {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(255, 255, 255, 0.045);
+  --el-table-header-text-color: var(--text-3);
+  --el-table-text-color: var(--text-2);
+  --el-table-border-color: rgba(255, 255, 255, 0.08);
+  --el-table-row-hover-bg-color: rgba(30, 144, 255, 0.09);
+  font-family: var(--sans);
+}
+
+.el-table th.el-table__cell {
+  font-weight: 600;
+}
+
+.el-table .el-table__inner-wrapper::before {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14) inset !important;
+}
+
+.el-input__wrapper.is-focus,
+.el-textarea__inner:focus {
+  box-shadow: 0 0 0 1px var(--blue) inset !important;
+}
+
+.el-dropdown-menu {
+  background: #1a2233 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.el-dropdown-menu__item {
+  color: var(--text-2) !important;
+}
+
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background: rgba(30, 144, 255, 0.14) !important;
+  color: #fff !important;
+}
+
+/* 毛玻璃通用类 */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+}
+
+/* ---- 通用工具类 ---- */
+.mono {
+  font-family: var(--mono);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.section-sub {
+  font-size: 14px;
+  color: var(--text-2);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-head::before {
+  content: '';
+  width: 4px;
+  height: 18px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--blue), var(--cyan));
+}
+
+.section-head h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 淡入动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hudScan {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(30, 144, 255, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(30, 144, 255, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
