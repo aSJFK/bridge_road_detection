@@ -7,5 +7,4 @@ static/
 .env
 .venv/
 venv/
-models/*.pt
 server.log

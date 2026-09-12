@@ -9,13 +9,6 @@ env/
 .mypy_cache/
 .ruff_cache/
 
-# 模型文件
-*.pt
-*.pth
-*.onnx
-*.engine
-*.onnx_engine
-
 # 上传与输出
 uploads/
 outputs/
